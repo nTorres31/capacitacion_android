@@ -1,1 +1,1 @@
-include ':app', ':fosforito-3.0.28', ':jdom-1.3'
+include ':app'
