@@ -11,6 +11,7 @@ import android.widget.Button;
 import android.widget.Toast;
 
 import com.base.dto.Usuario;
+import com.example.usuario.tuto01.MainActivity;
 import com.midd.comunicacion.Comunicacion;
 import com.midd.login.FacadeLogin;
 import com.util.LoginAsyncTask;
@@ -89,7 +90,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     public void validarUsuario(boolean valido) {
 
             if( valido ){
-                Intent intent = new Intent( getApplicationContext() , TaskTimeDataActivity.class );
+                Intent intent = new Intent( getApplicationContext() , MainActivity.class );
                 startActivity(intent);
                 finish();
             }
