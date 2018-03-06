@@ -1,4 +1,4 @@
-package com.example.usuario.tuto01;
+package com.example.usuario.capacitacion;
 
 import android.app.DatePickerDialog;
 import android.support.v7.app.AppCompatActivity;
@@ -14,7 +14,6 @@ import com.adapter.ProyectoAdapter;
 import com.base.dto.Entregables;
 import com.base.dto.PlanProyecto;
 import com.base.dto.Proyecto;
-import com.midd.comunicacion.Comunicacion;
 import com.midd.entregable.FacadeEntregable;
 import com.midd.proyecto.FacadePlanProyecto;
 import com.midd.proyecto.FacadeProyecto;

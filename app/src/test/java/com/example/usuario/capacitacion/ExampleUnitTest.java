@@ -1,4 +1,4 @@
-package com.example.usuario.tuto01;
+package com.example.usuario.capacitacion;
 
 import org.junit.Test;
 

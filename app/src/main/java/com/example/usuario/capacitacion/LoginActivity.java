@@ -1,14 +1,11 @@
-package com.example.usuario.tuto01;
+package com.example.usuario.capacitacion;
 
 import android.app.AlertDialog;
 import android.app.ProgressDialog;
 import android.content.Intent;
-import android.os.Handler;
-import android.os.Looper;
 import android.support.design.widget.TextInputEditText;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
@@ -30,13 +27,14 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     AlertDialog.Builder builder;
 
     Button buttonLogin;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_login);
 
 
-        login = findViewById(R.id.login);
+        login   = findViewById(R.id.login);
         password = findViewById(R.id.password);
         buttonLogin = findViewById(R.id.buttonLogin);
 
@@ -48,13 +46,13 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         progressDialog.setCanceledOnTouchOutside(false);
         progressDialog.setMessage("Iniciando sesión por favor espere.");
 
-
+        /*
         dialog = new ProgressDialog(this);
         dialog.setMessage("Descargando...");
         dialog.setTitle("Progreso");
         dialog.setProgressStyle(ProgressDialog.STYLE_HORIZONTAL);
         dialog.setCancelable(false);
-
+        */
 
     }
 
@@ -91,9 +89,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     public void validarUsuario(boolean valido) {
 
             if( valido ){
-                progressDialog.dismiss();
                 Intent intent = new Intent( getApplicationContext() , TaskTimeDataActivity.class );
-                intent.putExtra("id" , "jjdiaz" );
                 startActivity(intent);
                 finish();
             }

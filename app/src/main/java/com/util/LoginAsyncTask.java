@@ -47,7 +47,7 @@ public class LoginAsyncTask extends AsyncTask<Usuario, Float, Integer> {
             }
             */
 
-        return 50;
+        return 0;
     }
 
 
@@ -70,7 +70,8 @@ public class LoginAsyncTask extends AsyncTask<Usuario, Float, Integer> {
     @Override
     protected void onPostExecute (Integer bytes){
         //dialog.dismiss();
-        progressDialog.show();
+        progressDialog.dismiss();
+
 
     }
 

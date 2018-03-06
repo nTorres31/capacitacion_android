@@ -1,4 +1,4 @@
-package com.example.usuario.tuto01;
+package com.example.usuario.capacitacion;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
