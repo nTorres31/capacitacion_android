@@ -10,5 +10,5 @@ import java.util.List;
 
 public interface IFacadeProyecto {
 
-    public List<Proyecto> GetProyectos();
+    List<Proyecto> GetProyectos();
 }

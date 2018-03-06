@@ -16,11 +16,11 @@ import com.midd.login.FacadeLogin;
 public class LoginAsyncTask extends AsyncTask<Usuario, Float, Integer> {
 
 
-    private Comunicacion listener;
+    private Comunicacion comunicacion;
     private ProgressDialog progressDialog;
 
-    public void setListener( Comunicacion listener  ) {
-        this.listener = listener;
+    public void setListener( Comunicacion comunicacion  ) {
+        this.comunicacion = comunicacion;
     }
     public void setDiaglog( ProgressDialog progressDialog ){
         this.progressDialog = progressDialog;
@@ -31,7 +31,7 @@ public class LoginAsyncTask extends AsyncTask<Usuario, Float, Integer> {
     {
         boolean valido = new FacadeLogin().getUser( usuarios[0] );
 
-        this.listener.validarUsuario(valido);
+        this.comunicacion.validarUsuario(valido);
 
             /*
 

@@ -7,7 +7,7 @@
     tools:context="com.example.usuario.capacitacion.TaskTimeDataActivity">
 
     <Spinner
-        android:id="@+id/list_proyects"
+        android:id="@+id/list_proyectos"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
@@ -16,7 +16,9 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        android:layout_marginRight="8dp"
+        android:layout_marginLeft="16dp" />
 
     <TextView
         android:id="@+id/textView"
@@ -32,12 +34,13 @@
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="15dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="32dp"
         android:text="Plan de proyecto :"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/list_proyects" />
+        app:layout_constraintTop_toBottomOf="@+id/list_proyectos"
+        android:layout_marginLeft="8dp" />
 
     <Spinner
         android:id="@+id/list_plan_proyectos"
@@ -49,7 +52,9 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="8dp" />
 
     <TextView
         android:id="@+id/textView3"
@@ -59,7 +64,8 @@
         android:layout_marginTop="32dp"
         android:text="Entregable :"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/list_plan_proyectos" />
+        app:layout_constraintTop_toBottomOf="@+id/list_plan_proyectos"
+        android:layout_marginLeft="8dp" />
 
     <Spinner
 
@@ -71,7 +77,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/list_plan_proyectos"
-        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+        app:layout_constraintTop_toBottomOf="@+id/textView3"
+        android:layout_marginRight="8dp" />
 
     <TextView
         android:id="@+id/textView4"
@@ -91,7 +98,8 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView4">
+        app:layout_constraintTop_toBottomOf="@+id/textView4"
+        android:layout_marginLeft="16dp">
 
         <EditText
             android:id="@+id/txtFecha"
@@ -112,6 +120,7 @@
             android:background="@drawable/ic_date_range_black_24dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginRight="8dp" />
     </android.support.constraint.ConstraintLayout>
 </android.support.constraint.ConstraintLayout>

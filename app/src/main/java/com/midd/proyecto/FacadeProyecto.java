@@ -19,12 +19,7 @@ import java.util.List;
  */
 
 public class FacadeProyecto implements IFacadeProyecto {
-
-    private Context context;
-    public FacadeProyecto(Context context ) {
-        this.context = context;
-    }
-
+  
     @Override
     public List<Proyecto> GetProyectos() {
         List<Proyecto> list = new ArrayList<>();
@@ -35,7 +30,7 @@ public class FacadeProyecto implements IFacadeProyecto {
 
            JSONObject jsonObject = new JSONObject( result.toString() );
 
-           if( jsonObject.get("status").toString().equals("success"))
+           if( jsonObject.getString("status").equals("success") )
            {
                JSONArray arraylist = jsonObject.getJSONArray("arraylist");
 
@@ -48,12 +43,12 @@ public class FacadeProyecto implements IFacadeProyecto {
 
                for ( int i = 0  ; i < arraylist.length() ; i++ )
                {
-                   JSONObject proyecto = arraylist.getJSONObject(i);
+                   JSONObject proyectoObject = arraylist.getJSONObject(i);
 
                    proyecto_temp = new Proyecto();
 
-                   proyecto_temp.setDsproyecto( proyecto.getString("Dsproyecto") );
-                   proyecto_temp.setNmconproyecto( proyecto.getString("Nmconproyecto"));
+                   proyecto_temp.setDsproyecto( proyectoObject.getString("Dsproyecto") );
+                   proyecto_temp.setNmconproyecto( proyectoObject.getString("Nmconproyecto"));
                    list.add(proyecto_temp);
                }
            }

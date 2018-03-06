@@ -26,25 +26,7 @@ public class ProyectoAdapter extends ArrayAdapter<Proyecto> {
         this.context = context;
         this.values = values;
     }
-    public int getCount()
-    {
-        return values.size();
-    }
 
-    public Proyecto getItem(int position)
-    {
-        return values.get(position);
-    }
-
-    public long getItemId(int position)
-    {
-        return position;
-    }
-
-    public List<Proyecto> getItems()
-    {
-        return this.values;
-    }
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent)

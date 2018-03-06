@@ -26,24 +26,28 @@ public class TaskTimeDataActivity extends AppCompatActivity {
     Spinner list_proyectos , list_plan_proyectos , list_entregable;
     EditText txtFecha;
 
-    public final Calendar c = Calendar.getInstance();
+    public Calendar c;
 
-    final int mes = c.get(Calendar.MONTH);
-    final int dia = c.get(Calendar.DAY_OF_MONTH);
-    final int anio = c.get(Calendar.YEAR);
-
+    int mes;
+    int dia;
+    int anio;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_task_time_data);
 
-        list_proyectos = (Spinner) findViewById(R.id.list_proyects);
-        list_plan_proyectos = (Spinner) findViewById(R.id.list_plan_proyectos);
-        list_entregable = (Spinner) findViewById(R.id.list_entregable);
-        txtFecha = (EditText) findViewById(R.id.txtFecha);
+        c = Calendar.getInstance();
+        dia = c.get(Calendar.DAY_OF_MONTH);
+        mes = c.get(Calendar.MONTH);
+        anio = c.get(Calendar.YEAR);
 
-        List<Proyecto> proyectoList = new FacadeProyecto( getApplicationContext() ).GetProyectos();
+        list_proyectos = findViewById(R.id.list_proyectos);
+        list_plan_proyectos = findViewById(R.id.list_plan_proyectos);
+        list_entregable = findViewById(R.id.list_entregable);
+        txtFecha = findViewById(R.id.txtFecha);
+
+        List<Proyecto> proyectoList = new FacadeProyecto().GetProyectos();
         FillProyectos( proyectoList );
 
         list_proyectos.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {

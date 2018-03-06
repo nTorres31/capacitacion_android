@@ -27,6 +27,7 @@ public class FacadePlanProyecto implements IFacadePlanProyecto {
         try{
             PlanProyecto planProyecto = new PlanProyecto();
             planProyecto.setNmconproyecto( Long.parseLong(proyecto.getNmconproyecto()) );
+
             RemoteServices remoteServices = new RemoteServices("http://23.23.195.39:8080/ArcangelServerPage","org.arcangel.cmd.proyectos.CmdPlanProyecto","listarXproyecto");
             StringBuffer result = remoteServices.invoke(planProyecto);
 
